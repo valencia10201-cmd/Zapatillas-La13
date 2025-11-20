@@ -1,4 +1,6 @@
-<!-- frontend/admin.html -->
+<?php
+// frontend/admin.php
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +12,7 @@
   <header>
     <h1>Panel Admin</h1>
     <nav>
-      <a href="catalogo.html">Ver catálogo</a>
+      <a href="catalogo.php">Ver catálogo</a>
     </nav>
   </header>
 

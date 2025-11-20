@@ -1,4 +1,6 @@
-<!-- frontend/catalogo.html -->
+<?php
+// frontend/catalogo.php
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -144,9 +146,9 @@
     <header>
       <h1>Catálogo - La 13</h1>
       <nav>
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="index.php">Inicio</a>
+        <a href="catalogo.php">Catálogo</a>
+        <a href="dashboard.php">Dashboard</a>
       </nav>
     </header>
 
@@ -166,20 +168,20 @@
     <div class="cart-float-items" id="cartFloatItems"></div>
     <div class="cart-float-footer">
       <strong id="cartFloatTotal">Total: $0</strong>
-      <a href="carrito.html" class="cart-float-link">Ir al carrito</a>
+      <a href="carrito.php" class="cart-float-link">Ir al carrito</a>
     </div>
   </div>
 
   <script>
     const products = [
       { id: 1, name: "VANS", price: 125000, image: "https://static.dafiti.com.co/p/vans-8315-5174572-1-product.jpg", colors: ["black", "brown", "navy"], sizes: [38, 39, 40, 41, 42, 43] },
-      { id: 2, name: "Nike air TN", price: 150000, image: "https://standshop.com.co/wp-content/uploads/2024/11/d75a5189-2a2e-4842-a707-0eade0130556.jpg", colors: ["red", "blue", "black", "gray"], sizes: [39, 40, 41, 42, 43, 44] },
-      { id: 3, name: "Adidas Samba", price: 150000, image: "https://static.dafiti.com.co/p/adidas-originals-6590-653048-4-product.jpg", colors: ["black", "red", "nude", "silver"], sizes: [35, 36, 37, 38, 39, 40] },
-      { id: 4, name: "Jordan Retro 1", price: 125000, image: "https://cdn-images.farfetch-contents.com/11/70/77/94/11707794_8097746_600.jpg", colors: ["white", "black", "blue", "green"], sizes: [36, 37, 38, 39, 40, 41, 42] },
-      { id: 5, name: "Converse All Star", price: 100000, image: "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_960_720.png", colors: ["brown", "tan", "navy", "black"], sizes: [40, 41, 42, 43, 44] },
+      { id: 2, name: "Nike air TN", price: 150000, image: "https://standshop.com.co/wp-content/uploads/2024/11/d75a5189-2a2e-4842-a707-0eade0130556.jpg", colors: ["red", "blue", "black", "gray"], sizes: [38, 39, 40, 41, 42, 43, 44, 45] },
+      { id: 3, name: "Adidas Samba", price: 150000, image: "https://static.dafiti.com.co/p/adidas-originals-6590-653048-4-product.jpg", colors: ["black", "red", "nude", "silver"], sizes: [35, 36, 37, 38, 39, 40, 41, 42] },
+      { id: 4, name: "Jordan Retro 1", price: 125000, image: "https://cdn-images.farfetch-contents.com/11/70/77/94/11707794_8097746_600.jpg", colors: ["white", "black", "blue", "green"], sizes: [38, 39, 40, 41, 42, 43, 44, 45] },
+      { id: 5, name: "Converse All Star", price: 100000, image: "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_960_720.png", colors: ["brown", "tan", "navy", "black"], sizes: [40, 41, 42, 43, 44, 45] },
       { id: 6, name: "Air Force 1", price: 100000, image: "https://m.media-amazon.com/images/I/81uiWMk9dnL._AC_SX675_.jpg", colors: ["brown", "green", "black"], sizes: [39, 40, 41, 42, 43, 44, 45] },
-      { id: 7, name: "Sandalias", price: 90000, image: "https://www.charleskeith.com/on/demandware.static/-/Library-Sites-CharlesKeith/default/dw7e760ed4/images/PeopleAlsoAsked/types-of-sandals/flat-sandals.webp", colors: ["tan", "white", "black", "blue"], sizes: [36, 37, 38, 39, 40, 41] },
-      { id: 8, name: "New Balance 1906R", price: 150000, image: "https://images-cdn.ubuy.tn/67162b882fd19c2880667e5e-new-balance-1906r-nb-new-spruce-men.jpg", colors: ["black", "brown", "gray"], sizes: [36, 37, 38, 39, 40, 41, 42] }
+      { id: 7, name: "Sandalias", price: 90000, image: "https://www.charleskeith.com/on/demandware.static/-/Library-Sites-CharlesKeith/default/dw7e760ed4/images/PeopleAlsoAsked/types-of-sandals/fall-sandals.jpg", colors: ["black", "white", "brown"], sizes: [35, 36, 37, 38, 39, 40, 41, 42, 43] },
+      { id: 8, name: "New Balance 1906R", price: 150000, image: "https://images-cdn.ubuy.tn/67162b882fd19c2880667e5e-new-balance-1906r-nb-new-spruce-men.jpg", colors: ["black", "brown", "gray"], sizes: [37, 38, 39, 40, 41, 42, 43, 44] },
     ];
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];

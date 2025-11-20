@@ -1,3 +1,6 @@
+<?php
+// frontend/carrito.php
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,17 +45,17 @@
     <header>
       <h1>Carrito de Compras - La 13</h1>
       <nav>
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="index.php">Inicio</a>
+        <a href="catalogo.php">Catálogo</a>
+        <a href="dashboard.php">Dashboard</a>
       </nav>
     </header>
 
-    <a href="catalogo.html" class="back-btn">← Volver al Catálogo</a>
+    <a href="catalogo.php" class="back-btn">← Volver al Catálogo</a>
 
     <div id="cartEmpty" class="empty-message" style="display:none">
       <h2>Tu carrito está vacío</h2>
-      <p>Vuelve al <a href="catalogo.html">catálogo</a> para añadir productos.</p>
+      <p>Vuelve al <a href="catalogo.php">catálogo</a> para añadir productos.</p>
     </div>
 
     <div id="cartContent" class="cart-content" style="display:none">
@@ -168,7 +171,7 @@
       const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0) * 1.19;
       // Guarda el total en localStorage para el checkout
       localStorage.setItem('totalAmount', total);
-      window.location.href = 'checkout.html';
+      window.location.href = 'checkout.php';
     });
 
     renderCart();

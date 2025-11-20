@@ -1,3 +1,6 @@
+<?php
+// frontend/checkout.php
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,7 +35,7 @@
       <h1>Completar Pago - La 13</h1>
     </header>
 
-    <a href="carrito.html" class="back-btn">← Volver al Carrito</a>
+    <a href="carrito.php" class="back-btn">← Volver al Carrito</a>
 
     <form id="checkoutForm">
       <!-- Datos Personales -->
@@ -180,7 +183,7 @@
           localStorage.removeItem('totalAmount');
 
           alert(`¡Pago confirmado! Número de pedido: #${result.pedido_id}`);
-          window.location.href = 'catalogo.html';
+          window.location.href = 'catalogo.php';
         } else {
           alert('Error: ' + result.error);
         }
@@ -208,37 +211,3 @@
   </script>
 </body>
 </html>
-
--- crear tabla de clientes
-CREATE TABLE IF NOT EXISTS clientes (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  email VARCHAR(100) UNIQUE NOT NULL,
-  telefono VARCHAR(20),
-  direccion VARCHAR(255),
-  ciudad VARCHAR(100),
-  codigo_postal VARCHAR(10),
-  fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- crear tabla de pedidos
-CREATE TABLE IF NOT EXISTS pedidos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  cliente_id INT NOT NULL,
-  total DECIMAL(10, 2) NOT NULL,
-  estado VARCHAR(50) DEFAULT 'Pendiente',
-  fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (cliente_id) REFERENCES clientes(id)
-);
-
--- crear tabla de items del pedido
-CREATE TABLE IF NOT EXISTS pedidos_items (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  pedido_id INT NOT NULL,
-  producto_id INT NOT NULL,
-  cantidad INT NOT NULL,
-  precio_unitario DECIMAL(10, 2) NOT NULL,
-  color VARCHAR(50),
-  talla VARCHAR(10),
-  FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
-);
